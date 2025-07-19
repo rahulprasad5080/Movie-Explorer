@@ -24,8 +24,12 @@ cd movie-explorer
 
 ```
 
+```bash
 Install dependencies
 npm install
+```
 
+```bash
 Run on Android
 npx react-native run-android
+```
