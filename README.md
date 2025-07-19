@@ -16,7 +16,7 @@ A simple, elegant React Native app that lets users explore popular movies, view 
 
 ---
 
-### 1. Clone the repo
+### Clone the repo
 
 ```bash
 git clone https://github.com/your-username/movie-explorer.git
