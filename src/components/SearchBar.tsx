@@ -17,6 +17,7 @@ const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
     <TextInput
       style={styles.search}
       placeholder={placeholder}
+      placeholderTextColor="#999"
       value={value}
       onChangeText={onChangeText}
       {...rest}

@@ -72,18 +72,22 @@ const HomeScreen = ({ navigation }: any) => {
       <View style={styles.contentWrapper}>
         <CustomSearchBar
           value={searchQuery}
+          placeholder="Search Movies..."
           onChangeText={text => dispatch(setSearchQuery(text))}
         />
         <FlatList
           data={filtered}
           keyExtractor={item => item.id.toString()}
-          renderItem={({ item }) => (
-            <MovieCard
-              movie={item}
-              onPress={() => navigation.navigate('Details', { movie: item })}
-              onToggleFavorite={() => dispatch(toggleFavorite(item))}
-            />
-          )}
+          renderItem={({ item }) => {
+            console.log('Rendering movie:', item);
+            return (
+              <MovieCard
+                movie={item}
+                onPress={() => navigation.navigate('Details', { movie: item })}
+                onToggleFavorite={() => dispatch(toggleFavorite(item))}
+              />
+            );
+          }}
           numColumns={2}
           columnWrapperStyle={{ justifyContent: 'space-between' }}
           contentContainerStyle={{ paddingBottom: 5 }}

@@ -22,7 +22,10 @@ const MovieCard: React.FC<Props> = ({ movie, onPress, onToggleFavorite }) => {
           {movie.title}
         </Text>
         <View style={styles.row}>
-          <Text style={styles.rating}>⭐ {Math.round(movie.vote_average)}</Text>
+          <Text style={styles.rating}>
+            ⭐ {movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A'}
+          </Text>
+
           <Text style={styles.date}>{movie.release_date}</Text>
         </View>
       </View>

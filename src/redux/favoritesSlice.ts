@@ -19,7 +19,7 @@ const favoritesSlice = createSlice({
 
       if (index >= 0) {
         state.favorites.splice(index, 1);
-      } else {/
+      } else {
         state.favorites.push(movie);
       }
     },
