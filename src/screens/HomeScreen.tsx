@@ -23,6 +23,7 @@ import { toggleFavorite } from '../redux/favoritesSlice';
 
 const HomeScreen = ({ navigation }: any) => {
   const dispatch = useDispatch();
+  let loadingTimeout: any;
   const { list, searchQuery } = useSelector((state: RootState) => state.movies);
   const favorites = useSelector(
     (state: RootState) => state.favorites.favorites,
@@ -62,7 +63,10 @@ const HomeScreen = ({ navigation }: any) => {
 
   const loadMore = () => {
     if (!loadingMore) {
-      setPage(prev => prev + 1);
+      clearTimeout(loadingTimeout);
+      loadingTimeout = setTimeout(() => {
+        setPage(prev => prev + 1);
+      }, 300);
     }
   };
 

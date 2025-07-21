@@ -10,7 +10,6 @@ A simple, elegant React Native app that lets users explore popular movies, view 
 - 🔍 **Search Functionality**: Filter movies by title in real time using Redux state
 - 🎥 **Movie Details Screen**: View detailed info with option to mark as favorite
 - ❤️ **Favorites**: Add/remove movies from favorites using Redux
-- ♻️ **Persistent State**: Favorite movies persist across app restarts via `redux-persist`
 - 🚀 **TypeScript**: Fully written in TypeScript with modular structure
 - 📱 **Navigation**: Seamless navigation using React Navigation
 
@@ -33,3 +32,7 @@ npm install
 Run on Android
 npx react-native run-android
 ```
+
+🙏 Thank You!
+
+I appreciate the opportunity to work on this assignment. Looking forward to your feedback!
