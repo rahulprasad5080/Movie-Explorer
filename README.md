@@ -6,7 +6,7 @@ A simple, elegant React Native app that lets users explore popular movies, view 
 
 ## 📱 App Preview
 
-![Home Screen](src/assets/home.jpeg) ![Details Screen](src/assets/details.jpeg)
+<p align="center"> <img src="src/assets/home.jpeg" alt="Home Screen" width="250"/> </p> <p align="center"> <img src="src/assets/details.jpeg" alt="Details Screen" width="250"/> </p>
 
 ## 🚀 Features
 
