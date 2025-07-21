@@ -14,13 +14,13 @@ const favoritesSlice = createSlice({
   initialState,
   reducers: {
     toggleFavorite(state, action: PayloadAction<Movie>) {
-      const exists = state.favorites.find(m => m.id === action.payload.id);
-      if (exists) {
-        state.favorites = state.favorites.filter(
-          m => m.id !== action.payload.id,
-        );
-      } else {
-        state.favorites.push(action.payload);
+      const movie = action.payload;
+      const index = state.favorites.findIndex(m => m.id === movie.id);
+
+      if (index >= 0) {
+        state.favorites.splice(index, 1);
+      } else {/
+        state.favorites.push(movie);
       }
     },
   },

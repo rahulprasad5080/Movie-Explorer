@@ -3,7 +3,6 @@ import { View, Text, Image, Button, StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite } from '../redux/favoritesSlice';
 import { RootState } from '../redux/store';
-import { Movie } from '../types/movie';
 
 const MovieDetailScreen = ({ route }: any) => {
   const { movie } = route.params;
@@ -18,8 +17,6 @@ const MovieDetailScreen = ({ route }: any) => {
       <Image source={{ uri: movie.poster }} style={styles.poster} />
       <Text style={styles.title}>{movie.title}</Text>
       <Text>{movie.description}</Text>
-      <Text>Genres: {movie.genres.join(', ')}</Text>
-      <Text>Release Date: {movie.releaseDate}</Text>
       <Button
         title={isFav ? 'Remove from Favorites' : 'Add to Favorites'}
         onPress={() => dispatch(toggleFavorite(movie))}

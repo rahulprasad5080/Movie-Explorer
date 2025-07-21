@@ -1,27 +1,22 @@
+import axios from 'axios';
 import { Movie } from '../types/movie';
 
-export const fetchMovies = async (): Promise<Movie[]> => {
-  // Static mock data; replace with Axios call for real API
-  return [
-    {
-      id: 1,
-      title: 'Inception',
-      rating: 8.8,
-      releaseYear: '2010',
-      description: 'A mind-bending thriller by Christopher Nolan.',
-      poster: 'https://via.placeholder.com/150',
-      genres: ['Action', 'Sci-Fi'],
-      releaseDate: '2010-07-16',
-    },
-    {
-      id: 2,
-      title: 'Interstellar',
-      rating: 8.6,
-      releaseYear: '2014',
-      description: 'A space odyssey that explores time and gravity.',
-      poster: 'https://via.placeholder.com/150',
-      genres: ['Adventure', 'Drama'],
-      releaseDate: '2014-11-07',
-    },
-  ];
+const API_KEY = 'bb3c29d0b09be163d60336897e591001';
+const BASE_URL = 'https://api.themoviedb.org/3';
+
+export const fetchMovies = async (page: number = 1): Promise<Movie[]> => {
+  try {
+    const response = await axios.get(`${BASE_URL}/movie/popular`, {
+      params: {
+        api_key: API_KEY,
+        language: 'en-US',
+        page,
+      },
+    });
+
+    return response.data.results;
+  } catch (error) {
+    console.error('Error fetching popular movies:', error);
+    return [];
+  }
 };
