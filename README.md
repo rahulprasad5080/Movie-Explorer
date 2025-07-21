@@ -4,6 +4,24 @@ A simple, elegant React Native app that lets users explore popular movies, view 
 
 ---
 
+# My React Native App
+
+This app shows trending movies with favorites and search.
+
+## 📱 App Preview
+
+![Home Screen](src/assets/home.jpeg)
+
+![Details Screen](src/assets/details.jpeg)
+
+## 🚀 Features
+
+- Search movies
+- Mark favorites
+- Persistent storage using Redux Persist
+
+---
+
 ## ✨ Features
 
 - 📃 **Home Screen**: Displays a list of popular movies using mock/static data
