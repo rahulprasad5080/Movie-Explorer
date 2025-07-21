@@ -4,15 +4,9 @@ A simple, elegant React Native app that lets users explore popular movies, view 
 
 ---
 
-# My React Native App
-
-This app shows trending movies with favorites and search.
-
 ## 📱 App Preview
 
-![Home Screen](src/assets/home.jpeg)
-
-![Details Screen](src/assets/details.jpeg)
+![Home Screen](src/assets/home.jpeg) ![Details Screen](src/assets/details.jpeg)
 
 ## 🚀 Features
 
@@ -36,7 +30,7 @@ This app shows trending movies with favorites and search.
 ### Clone the repo
 
 ```bash
-git clone https://github.com/your-username/movie-explorer.git
+git clone https://github.com/rahulprasad5080/Movie-Explorer.git
 cd movie-explorer
 
 ```
